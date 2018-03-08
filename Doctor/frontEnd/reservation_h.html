@@ -1,0 +1,143 @@
+<DOCTYPE!>
+<html>
+<head>
+	<title>从数据库获取数据显示到页面上</title>		
+	<meta charset='utf8'/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <script src='js/rem.js'></script>
+	<script type="text/javascript" src="js/jQuery2.1.js"></script>
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<script src='js/swiper-3.4.2.min.js'></script>
+	<style>
+		*{
+			margin: 0 auto;
+		}
+		
+		.div1{
+			float: left;
+			height: 100px;
+			width: 10.8rem;
+			border-bottom: 1px solid #DDE5EB;
+		}
+		#zhong a:link{
+			color: #101010;
+		}
+		#zhong a:visited{
+			color: #101010;
+		}
+		#zhong a:hover{
+			color: #101010;
+		}
+		#zhong a:active{
+			color: #101010;
+		}
+		#zhong{
+			width: 10.8rem;	
+		}
+		#zhong:after{		
+			content: "";
+			clear:both;
+			display: block;		
+		}
+		.special{
+			border: 0px;
+			width: 50px;
+		}
+		.top1{
+			width: 30px;
+			height: 30px;
+			font-size: 16px;
+			color: blank;
+			float: left;
+		}
+		.div1 img{
+			margin-top: 10px;
+			width: 120px;
+			height: 75px;
+			float: left;
+		}
+		.txt{
+			margin-top: 10px;
+			width: 200px;
+			height: 70px;
+			float: left;
+		}
+		.txt span{
+			font-size: 16px;
+		}
+		.dir {
+			display: inline-block;
+		}
+		.div1 span{
+			float: left;
+		}
+		.add,.level{
+			display: block;
+			float: left;
+			clear: both;
+			color: #968C96;
+		}
+	#nav{
+		width: 10.8rem;
+		height: 55px;
+		line-height: 55px;
+		background-color: #31b8c4;
+		color: white;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 10px;
+	}		
+	#nav img{
+		float: left;
+		margin-top: 15px;
+		margin-left: 20px;
+		width: 15px;
+	}
+	</style>
+</head>
+<body>
+<div id="nav">
+	<img src="images/right1.png" alt="" class="back">
+	<span style='margin-left:-30px;'>选择医院</span>
+</div>
+<div id='zhong'>
+	
+</div>
+
+</body>
+<script>
+	$.ajax({
+		type:'get',
+		url:'http://192.168.163.144:8080/hospital',
+		success:function(data){
+			for(var i=0;i<12;i++){
+
+				$('#zhong').html($('#zhong').html()+`
+					<div class='div1'>
+						<a href="reservation_o.html#`+data[i].hospitalID+`">
+
+						<div class="top1">`+data[i].hospitalID+`</div>
+							<img src="`+data[i].hospitalImg+`"/>
+							<div class="txt">
+							    <span class='hospitalName'>`+data[i].hospitalName+`</span>
+								<span class='add'>`+data[i].hospitalAddress+`</span>
+								<span class='level'>`+data[i].level+`</span>
+							</div>
+						</a>
+
+					</div>
+
+
+					`)
+			}
+			
+			console.log('获取到第一个医院的信息。',data);
+			console.log(data[0].hospitalID);
+		}
+	});
+	$('.back').click(function(){
+		window.history.back();
+	})
+</script>
+</html>

@@ -1,0 +1,225 @@
+<DOCTYPE!>
+<html>
+<head>
+	<title>从数据库获取数据显示到页面上</title>		
+	<meta charset='utf8'/>
+	<script src='js/jQuery2.1.js'></script>
+	<style>
+		*{
+			margin: 0 auto;
+			text-align: center;
+		}
+		ul li{
+			list-style: none;
+			border-bottom: 1px solid pink;
+		}
+		div{
+			border:1px solid pink;
+		}
+		.nav{
+			height: 50px;
+			width: 500px;
+			background-color: rgb(49,184,196);
+			color: white;
+			text-align: center;
+			line-height: 50px;
+		}
+		.nav h1{
+			font-size: 16px;
+
+		}
+		.right{
+			display: inline-block;
+			float: left;
+			margin-left: 50px;
+		}
+		.tijiao{
+			border: 0px;
+			color: white;
+			background-color:lightblue;
+			width: 200px;
+			height: 30px;
+			font-size: 20px;
+		}
+		.tianjia {
+			border: 1px solid lightblue;
+			background-color: white;
+			color: lightblue;
+			width: 40px;
+			height: 20px;
+			font-size: 10px;
+		}
+		.genggai{
+			border: 1px solid lightblue;
+			background-color: white;
+			color: lightblue;
+			width: 40px;
+			height: 20px;
+			font-size: 10px;
+		}
+		.yiyuan{
+			float: left;
+		}
+		.yiyuan1{
+			float: right;
+		}
+		.time{
+			float: left;
+		}
+		.time1{
+			float: right;
+		}
+		.special{
+			display: none;
+			width: 200px;
+			height: 160px;
+			color: red;
+			border: 2px solid yellow;
+			position: fixed;
+			left: 360px;
+			top: 100px;
+			z-index: 0;
+			background-color: white;
+		}
+		.special1{
+			font-size: 16px;
+			width: 300px;
+			height: 160px;
+			color: red;
+			border: 2px solid yellow;
+			position: fixed;
+			left: 360px;
+			top: 100px;
+			background-color: white;
+			display: none;
+			
+		}
+		.date{
+			width: 15px;
+			height: 15px;
+		}
+		.tian{
+			width: 100px;
+			height: 30px;
+			border: 0px;
+			color: white;
+			background-color: lightblue;
+			border-radius: 5px;
+		}
+		.special2{
+			background-color: white;
+			display:none;
+			position: fixed;
+			left: 360px;
+			top: 100px;
+			width: 300px;
+			font-size: 16px;
+			color: blue;
+			height: auto;
+			padding: 10px;
+		}
+		.btn{
+			width: 50px;
+			height: 20px;
+			line-height: 20px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0;
+			margin-top: 5px;
+		}
+		.btn1{
+			width: 150px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 10px;
+			color: white;
+			background-color: lightblue;
+			border: 0;
+			border-radius: 3px;
+			margin-top: 10px;
+		}
+		.btnbtn{
+			width: 322px;
+			height: auto;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+
+<div class="nav">
+	<span class='right'>&lt</span>
+	<span>口袋医生</span>
+</div>
+
+<div style="width:500px;height:150px;">
+	<h5>医生信息</h5>
+	<img src="" alt="">
+	<p class="name"></p>
+</div>
+
+<div style="width:500px;height:50px;">
+	<span class='yiyuan'>初诊医院</span><span class='yiyuan1'>北京德胜门中医院</span>
+</div>
+
+<div style="width:500px;height:50px;">
+	<span class='time'>就诊时间</span><span class='time1' style='float:'>请选择》</span>
+</div>
+
+<div style="height:200px;width:500px;">
+	温馨提示；</br>
+	1.建议在每天8:00-21:00之间进行预约；</br>
+	2.因专家号源稀缺，建议隔周挂号，成功率较高，不建议挂当天号</br>
+	3.挂号费由医院收取，口袋医生仅提供预约挂号服务，不收取任何费用。
+</div>
+<h5 style="border:1px solid red;height:30px;width:500px;">个人信息</h5>
+
+<div style="height:50px;width:500px;">
+	<span style='float:left;' class='patient_name'>就诊人信息：</span>
+	<input type="button" value="更改" class="genggai">
+	<input type="button" value="添加" class="tianjia">
+</div>
+<div style='height:40px;width:500px;'>
+	<span style='float:left;font-size: 16px;' class='sfz'>身份证：</span>
+	<span style='float:right;font-size: 16px;' class='sjh'>手机号：</span>
+</div>
+<div  style='height:150px;width:500px;'>
+	<input type="CheckBox" class="checkbox1"/>
+	如果遇到医生听诊等特殊情况，您的预约可能会被取消，客户人员会及时通知您，请关注预约状态，保持手机畅通。
+</div>
+<input type="submit" value="提交预约" class="tijiao">
+
+<div class="special">
+	<ul style='margin-left:-35px;margin-top:-5px;' >
+
+		<li class="li1"><input type="radio" name="riqi" class="date" value="" /></li>
+		<li class="li2"><input type="radio" name="riqi" class="date" value="" /></li>
+		<li class="li3"><input type="radio" name="riqi" class="date" value="" /></li>
+		<li class="li4"><input type="radio" name="riqi" class="date" value="" /></li>
+	</ul>
+	<button class="srue">确定</button>
+	<button class="cancle">取消</button>
+	
+</div>
+<div class="special1">
+	<h5>添加就诊人</h5>
+	<ul style='margin-left:-35px;margin-top:-5px;'>
+		<li>姓  名：<input type="text" class="pname" /></li>
+		<li>身份证：<input type="text" placeholder='请输入身份证号' class="idcard" /></li>
+		<li>年  龄：<input type="text" placeholder='请输入年龄' class="age" /></li>
+		<li>手机号：<input type="text" placeholder='请输入手机号' class="tel" /></li>
+	</ul>
+	<button class="tian">确认添加</button>
+	<button class="quxiao1">取消</button>
+</div>
+<div class="special2">
+	<span style='display:block;'>更改就诊人</span>
+	<div class="btnbtn">
+		
+	</div>
+	<button class="btn1">添加新就诊人</button>
+	<button class="quxiao2">取消</button>
+</div>
+</body>
+<script src="js/reservation.js"></script>
+</html>
