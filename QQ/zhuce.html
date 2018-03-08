@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta name="viewport" content="width = device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+	
+		<script type="text/javascript" src="jQuery2.1.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5.js"></script>
+		<style type="text/css">
+		body{
+			color:rgb(177,26,41);
+			border: 1px solid rgb(177,26,41);
+		}
+			.spe{
+				text-decoration: none;
+				color:rgb(177,26,41);
+				border: 1px solid rgb(177,26,41);
+			}
+			.ui-bar-f{
+				
+				font-family: 微软雅黑;
+				color:rgb(177,26,41);
+				background:rgb(252,166,177);
+			}
+			.ui-body-f1{
+				color:rgb(177,26,41);
+				background:rgb(254,234,235);
+			}
+				.ui-page-theme-f2{
+					color:rgb(177,26,41);
+				background:rgb(254,234,235);
+				}
+				.ui-bar-f11{
+				
+				font-family: 微软雅黑;
+				color:rgb(177,26,41);
+				background:rgb(235,125,150);
+			}
+			#img{
+				position: relative;
+				left: 50%;
+				margin-left: -90px;
+			}
+			#nav ul li a{
+				font-family: 微软雅黑;
+				font-size: 14px;
+				color:rgb(177,26,41);
+			}
+			#nav ul a{
+				border: 0px;
+			}
+		</style>
+</head>
+<body>
+ <div data-role='page' data-theme='f2'>
+	
+	
+	<div data-role='content' >
+		<img src="img/qq.png" style="height:240px;width:180px;" id='img' alt="">
+		<form action="post" action='demoform.asp'>
+			
+			<label for="fname" class="ui-hidden-accessible">姓名：</label>
+			<input type="text" name='fname' id='fname' placeholder='昵称'>
+			
+			<label for="fpassword" class="ui-hidden-accessible">密码：</label>
+			<input type="password" name='fpassword' id='fpassword' placeholder='密码'>
+			
+
+			<input type="button" value="注册" id='btn'>
+		
+		</form>	
+	</div>
+	
+	<div data-role='footer' data-position='fixed' style='text-align:center;' data-theme='f11'>
+		<div data-role='navbar' id='nav'>
+			<ul>
+				<li><a href="#">欢迎注册</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+ </div>
+
+ <script>
+ 
+	$('#btn').click(function(){
+		var name=$('#fname').val();
+ 		var ps=$('#fpassword').val();
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'register',userID:name,password:ps},
+			
+			success:function(data){
+				if(data == 0){
+					alert('用户名已被使用，请重新命名');
+				}
+				else if(data == 2){
+					alert('数据库错误');
+				}
+				else{
+					alert("昵称：" + $('#fname').val()+ "密码："+ $('#fpassword').val());
+					$(location).prop('href', 'http://htmlpreview.github.io/?https://github.com/2015015413suyuanyuan/test/blob/master/QQ/denglu.html');
+				}
+		
+			}
+
+		})
+
+	})
+	
+	
+</script>
+</body>
+</html>

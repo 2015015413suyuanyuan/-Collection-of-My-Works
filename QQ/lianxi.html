@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<meta name="viewport" content="width = device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.css" />
+		<script type="text/javascript" src="jQuery2.1.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5.js"></script>
+		<script src="iscroll.js"></script>
+		<script src="navbarscroll.js"></script>
+		<link rel="stylesheet" href="css1.css">
+</head>
+<body>
+ <div data-role='page' data-theme='f2' id='one'>
+
+	<div data-role="panel" id="myPanel" data-theme='ff' class="ui-panel-fixed" style="height:100%;"> 
+          <div data-role='header' style="border:0px;">
+	          	<a href="#" data-role="none" data-iconpos="notext"><img src="img/qian.png" style='width:30px;padding-top:5px;'alt="" ></a> 
+				  <h3 style='float:left;'>已打卡147天</h3>   
+				 <a href="#" data-role="none" data-iconpos="notext" style='padding-top:10px;'><img src="img/er.png" style='width:30px;'alt=""></a> 
+	 			
+	 			<img src="img/1.png" alt="" style='width:40px;vertical-align:middle;'/><span style='font-size:30px;display:inline-block;padding-left:8px;'>一叶知秋</span>
+
+	 			<a href="#" data-role='none' style="display:block;"><img src="img/sun.png" style='width:20px;' alt=""><img src="img/sun.png" style='width:20px;' alt=""><img src="img/sun.png" style='width:20px;' alt=""><img src="img/moon1.png" style='width:20px;' alt=""><img src="img/moon1.png" style='width:20px;' alt=""><img src="img/star.png" style='width:20px;' alt=""><img src="img/star.png" style='width:20px;' alt=""><img src="img/star.png" style='width:20px;' alt=""></a>
+	 			<a href="#" data-role='none' style="display:block;">编辑个性签名</a>
+          </div>
+          <div data-role='content' id='li_a'>
+          	<ul  style='float:left;margin-left:-55px;margin-top:-5px;'>
+		
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b1.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>了解会员特权</span></a>
+				</li>
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b2.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>QQ钱包</span></a>
+				</li>
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b3.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>个性装扮</span></a>
+				</li>
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b4.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>我的收藏</span></a>
+				</li>	
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b5.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>我的相册</span></a>
+				</li>	
+				<li style='height:60px;line-height:60px;'>
+					<a href="#"><img src="img/b6.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>我的文件</span></a>
+				</li>
+				<li style='height:60px;line-height:60px;'>
+					<a href="#" ><img src="img/b7.png" class="ui-li-icon" style="width:30px;"><span style='padding-left:20px;'>免流量特权</span></a>
+				</li>
+			</ul>
+
+          </div>
+			
+			<div data-role='footer' style='border:0px;color:white;position:absolute;bottom:20px;'>
+				<img src="img/set.png" alt="" style="width:20px;vertical-align:middle;"><span style='display:inline-block;padding-left:8px;'>设置</span>
+				<img src="img/moon.png" alt="" style="width:20px;vertical-align:middle;padding-left:70px;"><span style='display:inline-block;padding-left:8px;'>夜间</span>
+
+			</div>
+	</div>
+
+	<div data-role="header" data-position='fixed' data-theme='f'> 
+		<a href="#myPanel" data-role="none" data-iconpos="notext">
+			<img src="img/1.png" style='width:40px;padding-top:5px;'alt="" >
+		</a> 
+		<h1>消息</h1>   
+		<a href="#" data-role="none" data-iconpos="notext" style='padding-top:10px;'>
+			<img src="img/5.png" style='width:40px;'alt="">
+		</a> 
+	</div>
+	<div data-role='content' style="margin-top:-20px;">
+		<div style='padding-bottom:20px;padding-top:-20px;'>
+			<input type="search" name='search' id='search' placeholder='搜索' >
+		</div>
+			
+
+		<ul data-role="listview">
+			
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/4.png" style='width:70px; margin:5px;'>
+		             <h2>我的电脑<span style='float:right;font-size:12px;'>12:32</span></h2>
+		             <p>good afternoon!</p>
+		         </a>
+		   </li>
+		    <li data-icon='false'> 
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'> 
+		             <img src="img/2.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>11:32</span></h2>
+		             <p>good morning!</p>
+
+		         </a>
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/t1.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>6:03</span></h2>
+		             <p>good night!</p>
+		         </a>
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/t2.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>11:32</span></h2>
+		             <p>good night!</p>
+		         </a>
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/t3.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>14:30</span></h2>
+		             <p>good night!</p>
+		         </a>
+		        
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/1.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>8:32</span></h2>
+		             <p>good night!</p>
+		         </a>
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/t3.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>14:30</span></h2>
+		             <p>good night!</p>
+		         </a>
+		        
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/1.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>8:32</span></h2>
+		             <p>good night!</p>
+		         </a>
+		   </li> <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/t3.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>14:30</span></h2>
+		             <p>good night!</p>
+		         </a>
+		        
+		   </li>
+		    <li data-icon='false'>
+		         <a href="#" data-iconpos="notext" data-icon='false'  class='spe'>
+		             <img src="img/1.png" style='width:70px; margin:5px;'>
+		             <h2>好友<span style='float:right;font-size:12px;'>8:32</span></h2>
+		             <p>good night!</p>
+		         </a>
+		   </li>
+		</ul>
+
+	</div>
+	<div data-role='footer' data-position='fixed' style='text-align:center;' data-theme='f11' class="footer">
+		<div data-role='navbar'>
+			<ul>
+				<li> <a href="#one" data-role='none' data-transtation='slide'><img src="img/q1.png" style='width:50px;'></a></li>
+				<li> <a href="#two" data-role='none'  data-transtation='slide'><img src="img/q2.png" style='width:50px;'></a></li>
+				<li> <a href="#three" data-role='none'  data-transtation='slide'><img src="img/q3.png" style='width:50px;'></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div data-role='page' data-theme='f2' id='two' >
+	<div data-role="header" data-position='fixed' data-theme='f'> 
+		<a href="#" data-role="none"><img src="img/1.png" style='width:40px;padding-top:5px;'alt=""></a> 
+
+		<h1>联系人</h1>  
+		<a href="#" data-role="none" style="text-direction:none;margin-top:15px;">添加</a> 
+
+	</div>
+	
+	
+	<div data-role='content' style="margin-top:-20px;" id='content'>
+		<div style='padding-bottom:20px;padding-top:-20px;'>
+			<input type="search" name='search' id='search' placeholder='搜索' >
+		</div>
+			<div class='new' >
+				新朋友<span><img src="img/r1.png" alt=""></span>
+			</div>
+			<div data-role='controlgroup' data-type='horizontal' class='friend'>
+				<a href="#">好友</a>
+				<a href="#">群</a>
+				<a href="#">多人聊天</a>
+				<a href="#">设备</a>
+				<a href="#">备忘录</a>
+			</div>
+	<div style="width:100%;margin:0;border-radius:0;border:0px;"> 
+			<ul data-role='collapsible' id='ul1' data-collapsed-icon='right' data-expanded-icon='down' >
+				<h2 class="h2 h3" style="color:red;">特别关心<span class='span' >1/1</span></h2>
+				<li>	        
+		             <img src="img/t1.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>先生</span>
+		             <span class='special'>[wifi在线]今天消息...</span>
+		         </li>
+				<li>	        
+		             <img src="img/t2.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>珺珺</span>
+		             <span class='special'>[4g在线]今天消息...</span>
+		         </li>
+			</ul>
+			<ul data-role='collapsible' id='ul1' data-collapsed-icon='right' data-expanded-icon='down' >
+			<h2 class="h2" style="color:red;">我的好友<span class='span' >2/3</span></h2>
+				<li>	        
+		             <img src="img/t3.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>珺珺</span>
+		             <span class='special'>[wifi在线]今天消息..</span>
+		         </li>
+				<li>	        
+		             <img src="img/1.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>白兔</span>
+		             <span class='special'>[wifi在线]今天消息...</span>
+		         </li>
+			</ul>
+
+			<ul data-role='collapsible' id='ul1' data-collapsed-icon='right' data-expanded-icon='down' >
+			<h2  class="h2"style="color:red;">大学同学<span class='span' >9/11</span></h2>
+				<li>	        
+		             <img src="img/1.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>逗比</span>
+		             <span class='special'>[wifi在线]今天消息...</span>
+		         </li>
+				<li>	        
+		             <img src="img/2.png" style='width:70px; margin:5px;'>
+		            <span class='special1'>芳芳</span>
+		             <span class='special'>[4g在线]今天消息...</span>
+		         </li>
+			</ul>
+		</div>
+
+	</div> 
+	
+	<div data-role='footer' data-position='fixed' style='text-align:center;' data-theme='f11' class="footer" >
+		<div data-role='navbar'>
+			<ul>
+				<li> <a href="#one" data-role='none'><img src="img/q1.png" style='width:50px;'></a></li>
+				<li> <a href="#two" data-role='none'><img src="img/q2.png" style='width:50px;'></a></li>
+				<li> <a href="#three" data-role='none'><img src="img/q3.png" style='width:50px;'></a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+<div data-role='page' data-theme='f2' id='three' >
+	<div data-role="header" data-position='fixed' data-theme='f'> 
+		<a href="#" data-role="none"><img src="img/1.png" style='width:40px;padding-top:5px;'alt=""></a> 
+
+		<h1>动态</h1>  
+		<a href="#" data-role="none" style="text-direction:none;margin-top:15px;">更多</a> 
+
+	</div>
+	
+	
+	<div data-role='content' style="margin-top:-20px;" id='content'>
+		<div style='padding-bottom:0px;padding-top:-20px;'>
+			<input type="search" name='search' id='search' placeholder='搜索' >
+		</div>
+	<style>
+		.clearFix:after{
+			
+			content: "";
+			clear:both;
+			display: block;
+			margin-bottom: 10px;
+			
+		}
+	</style>		
+		<div class="clearFix" style="border-bottom:1px solid rgb(177,26,41);border-top:1px solid rgb(177,26,41);margin:0 -1em;padding-top:10px;">
+			<div class="item1">
+				<img src="img/zone.png" style='width:33px;height:33px;'>
+					<p style="margin:0px;">好友动态</p>
+			</div>
+			<div class="item1">
+				<img src="img/red.png" style='width:25px;height:33px;'>
+					<p style="margin:0px;">附近</p>
+			</div>
+			<div class="item1">
+				<img src="img/club.png" style='width:44px;height:33px;'>
+					<p style="margin:0px;">兴趣部落</p>
+			</div>
+
+	
+		</div>
+	
+
+			
+	
+	</div> 
+	
+	<div data-role='footer' data-position='fixed' style='text-align:center;' data-theme='f11' class="footer" >
+		<div data-role='navbar'>
+			<ul>
+				<li> <a href="#one" data-role='none'><img src="img/q1.png" style='width:50px;'></a></li>
+				<li> <a href="#two" data-role='none'><img src="img/q2.png" style='width:50px;'></a></li>
+				<li> <a href="#three" data-role='none'><img src="img/q3.png" style='width:50px;'></a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+</body>
+
+</html>
