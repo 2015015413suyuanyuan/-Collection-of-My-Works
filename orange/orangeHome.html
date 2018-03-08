@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	<meat name="viewport"content="width=device-width,user-scalable=no,
+			initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+			<link rel="stylesheet" href="swiper-3.4.2.min.css">
+			<script src="swiper-3.4.2.min.js"></script>
+		<title>橘家</title>
+		<script src='rem.js'></script>
+		<style>*{
+			margin: 0;
+			padding: 0;
+			font-style: 方正兰亭超细黑正体;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul li{
+			list-style: none;
+		}
+		header{
+				font-size: 0.3358rem;
+				height: 0.88rem;
+				background-color: #ffdb2c;
+				color:black ;
+			}
+			.orange{
+				font-style: 方正兰亭超细黑正体;
+				padding-top: 0.16rem;	
+				margin: 0rem 3.29rem 0 3.29rem;
+			}
+		    .orangehome{
+		    	margin: 0rem 3.29rem 0 3.25rem;
+		    }
+		   
+		    .seach{
+				display: inline-block;
+				width: 0.4rem;
+				height: 0.4rem;
+				background: url(images/search.png) no-repeat;
+				background-size: 100% 100%;
+				float: right;
+				margin: -0.45rem 0.32rem 0 0;
+				
+			}
+			.nav{
+				height: 0.88rem;
+				line-height: 0.88rem;
+				font-size: 0.3rem;
+				
+			}
+			.nav ul li{
+				float: left;
+				width: 1.72rem;
+				height: 0.9rem;
+				text-align: center;
+				
+			}
+			.nav a{
+				color: #717171; ;
+			}
+			.nav ul li:hover{
+				border-bottom: 10px solid #ffdb2c;
+			}
+			.bottom {
+				border-bottom:10px solid #ffdb2c;
+				color: #535353;
+			}
+			.show{
+				margin-top: 0.09rem;
+				width: 7.5rem;
+				height: 3.2rem;
+				background-image: url(images/big.jpg);
+			}
+			.main{
+				height: 8.9rem;
+			}
+			.hot{
+				height: 0.98rem;
+			}
+			.hot .re{
+				letter-spacing: 0.2rem;
+				font-size: 0.36rem;
+				margin-left: 2.77rem;
+			}
+			.hot .rehome{
+				letter-spacing: 0.09rem;
+				margin-left: 2.3rem;
+			}
+			.pic1{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/1.jpg); 
+				background-size: contain;
+			margin: 0.24rem 0 0.24rem 0.32rem;
+				
+			}
+			.p{
+				color: white;
+				text-align: center;
+				font-size: 0.3rem;
+				height: 0.54rem;
+				width:3.32rem;
+				background: rgba(76,78,84,0.79);
+				margin-top: -0.26rem;
+			}
+			.pic1 img{
+				margin-top: 1.15rem;
+				height: 0.52rem;
+				line-height: 0.52rem;
+				width: 0.52rem;
+				margin-left: 2.45rem;
+			}
+			div img{
+					margin-top: 1.15rem;
+				height: 0.52rem;
+				width: 0.52rem;
+				margin-left: 2.45rem;
+			}
+			.pic2{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/2.jpg); 
+				background-size: contain;
+				margin: 0.24rem 0 0.24rem 0.32rem;
+			}
+			.pic3{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/3.jpg); 
+				background-size: contain;
+				
+				margin: 0.24rem 0 0.24rem 0.32rem;
+			}
+			.pic4{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/4.jpg); 
+				background-size: contain;
+				margin: 0.24rem 0 0.24rem 0.32rem;
+				
+			}
+			.pic1{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/1.jpg); 
+				background-size: contain;
+				margin: 0.24rem 0 0.24rem 0.32rem;
+				
+			}
+			.pic2{
+				height:2.22rem ;
+				width:3.32rem ;
+				float: left;
+				background-image: url(images/2.jpg); 
+				background-size: contain;
+				margin: 0.24rem 0 0.24rem 0.32rem;
+				
+			}
+			.footer{
+				font-size: 0.22rem;
+			width: 7.5rem;
+			height: 0.99rem;
+			text-align: center;
+			line-height:1rem;
+			position: fixed;	
+			bottom: 0;
+			left: 0;
+			background-color: white;
+			
+			
+			}
+			.item1{
+				height: 1.0rem;
+				width: 1.5rem;
+				float: left;
+			}
+			.item1 a{
+				color:#4c4c4c;
+				text-decoration: none;
+			}
+			.item1 img{
+				margin: 0.16rem;
+			}
+			.footer .item1 p{
+				margin-top: -0.8rem;
+			}
+		.swiper-container {
+        width: 7.5rem;
+        height: 3.1rem;
+        
+    }
+    .swiper-slide {
+        font-size: 18px;
+          width: 7.5rem;
+        height: 3.1rem;
+        background-image: url(images/big.jpg);
+        background-size:contain;
+    }
+
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<p class='orange'>桔家</p>
+			<p class='orangehome' style='font-size: 0.1008rem;'>ORANGE HOME</p>
+			<span class='seach'></span>
+		</header>
+		<div class='nav'>
+			<ul>
+				<li class='bottom'><a  href="#">推荐</a></li>
+				<li><a href="#">家居</a></li>
+				<li><a href="#">餐厨</a></li>
+				<li><a href="#">床上用品</a></li>
+			</ul>
+		</div>
+	
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img style='width=7.5rem,height=3.1rem' src="images/big.jpg"></div>
+            <div class="swiper-slide"><img src="images/big.jpg"></div>
+            <div class="swiper-slide"><img src="images/big.jpg"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+ 	</div>
+
+
+		<div class='main'>
+			<div class='hot'>
+			<p class='re'>热门推荐</p>
+			<p class='rehome' style='font-size: 0.22rem;'>RECOMMENDATION</p>
+			</div>
+			<div class='pic1'>
+				
+				<img src="images/tuoyuan.png" />
+				<div class='p'>-简约黑檀木茶几-</div>
+			</div>
+			<div class='pic2'>
+				
+				<img style='height: 0.52rem;width: 0.52rem;' src="images/star2.png" />
+				<div class='p'>-北欧白橡木书架-</div>
+			</div>
+			<div class='pic3'>
+				
+				<img style='height: 0.52rem;width: 0.52rem;' src="images/star2.png" />
+				<div class='p'>-北欧风餐边柜-</div>
+			</div>
+			<div class='pic4'>
+				
+				<img style='height: 0.52rem;width: 0.52rem;' src="images/star2.png" />
+				<div class='p'>-简约黑檀木茶几-</div>
+			</div>
+			<div class='pic1'>
+				
+				<img style='height: 0.52rem;width: 0.52rem;' src="images/star2.png" />
+				<div class='p'>-北欧白橡木书架-</div>
+			</div>
+			<div class='pic2'>
+				
+				<img style='height: 0.52rem;width: 0.52rem;' src="images/star2.png" />
+				<div class='p'>-北欧风餐边柜-</div>
+			</div>
+		</div>
+		<div class='footer'>
+			<div class="item1">	
+				<img src='images/home.png' style="width: 0.3rem;height: 0.35rem;" />
+				<p><a href='#' style='color:#ffdb2c;'>首页</a></p>
+			</div>
+			<div class="item1">	
+				<img src='images/shop.png' style="width: 0.3rem;height: 0.35rem;" />
+				<p><a href='#'>商场</a></p>
+			</div>
+			<div class="item1">	
+				<img src='images/add.png' style="width:0.82rem;height: 0.83rem;" />
+				
+			</div>
+			<div class="item1">	
+				<img src='images/status.png' style="width: 0.3rem;height: 0.35rem;" />
+				<p><a href='#'>灵感</a></p>
+			</div>
+
+			<div class="item1">	
+				<img src='images/people.png' style="width: 0.3rem;height: 0.35rem;" />
+				<p><a href='#'>我的</a></p>
+			</div>
+		</div>
+
+
+
+ <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+
+
+	</body>
+</html>
