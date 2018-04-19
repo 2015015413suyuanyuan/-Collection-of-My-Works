@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<HTML>
+<head>
+	<meta charset='utf-8'>
+	<title>实现水平垂直居中（1）</title>
+	<style>
+		p{
+			border:1px solid red;
+		}
+	</style>
+	<script>
+	function whichButton(e){
+		if(e.button == 2){
+			alert('你点击了右键');
+		}
+		else{
+			alert('你点击了左键');
+		}
+	}
+	</script>
+</head>
+<body onmousedown="whichButton(event)">
+	<p>
+		鼠标的button时间属性可返回一个整数，指示当前事件被处罚时哪个鼠标按键被点击。0：左键 1：中键  2：右键
+	</p>
+</body>
+
+</HTML>
